@@ -1,7 +1,97 @@
 
-body{font-size: 1.6rem; line-height: 1.2; background: #F3F5EC;}
-.inner{max-width: 1540px; margin: 0 auto; padding: 0 20px;}
-.inner img{text-align: center; width: 100%;height: 100%; object-fit: cover;}
- #wrap #main{  overflow: hidden;}
+.wraper{background: #f0eff0; text-align: center;}
 
-#footer{font-size: 16px;  margin: 0 auto; text-align: center;margin: 40px 0 20px;}
+
+
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 스크롤해도 화면 고정 */
+    z-index: 1000; /* 다른 요소보다 위에 배치 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* 검은색 반투명 배경 */
+}
+
+
+#modalContainer {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+}
+#modalContainer.hidden {
+  display: none;
+}
+
+/* 모달 창 스타일 */
+#modalContent {
+  background-color: #fff;
+
+  width: 80vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out; /* 등장 애니메이션 */
+}
+
+#modalContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* 헤더 공간 설정 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* 닫기 버튼 */
+#closeModal {
+  background: none;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+  position: absolute; left: 50%; top: 2% ;
+  transform: translateX(-50%);
+  color: #eee;
+  
+  
+}
+
+/* 등장 애니메이션 효과 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* 애니메이션 정의 */
+@keyframes morphAction {
+  0% {
+    
+    background-color: #e1e1da10; 
+    opacity: 0.5;
+    color: #fff;
+  }
+  50% {
+    background-color: #bca49a10;        /* 원 */
+    opacity: 1;
+    color: #eee;
+  }
+}
+
+.click{position: absolute; left: 50%;transform: translateX(-50%);  top: 30%;font-size: 3rem; padding: 10px 50px;text-transform: uppercase; font-weight: 500; letter-spacing: 2px;animation: morphAction 0.5s infinite alternate; border-radius: 30px; color: #eee; text-shadow: 0 0  10px rgba(0, 0, 0, 0.3);} 
+
+#footer{font-size: 16px;  margin: 0 auto; text-align: center;margin:   4px 0;}

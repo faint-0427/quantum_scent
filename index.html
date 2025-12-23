@@ -4,34 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quantum scent</title>
-
+    <title>product-page_kimono-miyako</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-        </header>
-
-        <main id="main">
+    <header id="header"></header>
+    <main id="main">
+        <div class="wraper">
             <div class="inner">
-                <img src="brand_concept_page.png" alt="">
-            </div>
-        </main>
-        <footer id="footer">
-            <div class="inner">
+                <div class="product_modal">
+                    <button id="openModal">
+                        <img src="img/scentthmb2.png" alt="">
+                    </button>
 
-                <p>design by gahyeon bak</p>
+                    <div id="modalContainer" class="hidden">
+                        <button id="closeModal">&times;</button>
+                        <div id="modalContent">
+
+
+                            <div class="modal-body">
+                                <h1><img src="img/brand_concept_page.png" alt=""></h1>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="click">
+                    <p>click page</p>
+                </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Copyright © 2025 gahyeon bak All Rights Reserved.</p>
+    </footer>
+
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>
