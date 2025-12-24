@@ -13,7 +13,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9); /* 검은색 반투명 배경 */
 }
-.product_modal .openModal img{cursor:pointer;}
+.product_modal img{cursor:pointer;}
 
 #modalContainer {
   position: fixed; 
@@ -96,3 +96,4 @@
 
 
 #footer{font-size: 16px;  margin: 0 auto; text-align: center;margin:   4px 0;}
+
